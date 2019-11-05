@@ -38,23 +38,23 @@
   <ItemGroup>
     <Reference Include="CSAc4yEFLibrary">
       <HintPath>C:\Library\c#\CSAc4yEFLibrary.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="CSAc4yLibrary">
       <HintPath>C:\Library\c#\CSAc4yLibrary.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="CSAc4yPersistentServiceTestLibrary">
       <HintPath>C:\Library\c#\CSAc4yPersistentServiceTestLibrary.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="CSAc4yServiceObjectFinalLibrary">
       <HintPath>C:\Library\c#\CSAc4yServiceObjectFinalLibrary.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="CSAc4yServicesPreProcessedAlgebraLibrary">
       <HintPath>C:\Library\c#\CSAc4yServicesPreProcessedAlgebraLibrary.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>

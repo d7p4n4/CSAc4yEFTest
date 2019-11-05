@@ -1,7 +1,8 @@
-﻿using CSAc4y.Class;
+﻿
 using CSAc4yObjectService.Class;
+using CSAc4yPersistentServiceTestLibrary;
 using CSAc4yService.Class;
-using DataAccess;
+using d7p4n4.Final.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,10 +19,11 @@ namespace CSAc4yServiceTest
         {
             try
             {
-                AllContext context = new AllContext("Ac4yDb");
-                CSAc4yPersistentServiceTestLibrary.PersistentService cSAc4YPersistentServiceTestLibrary = new CSAc4yPersistentServiceTestLibrary.PersistentService(context);
+                string baseName = "Ac4yDb";
+                PersistentService cSAc4YPersistentServiceTestLibrary = new PersistentService(baseName);
 
                 Ac4yIdentificationBase ac4YIdentificationBase = new Ac4yIdentificationBase();
+                ac4YIdentificationBase.CreatedAt = DateTime.Now;
 
                 cSAc4YPersistentServiceTestLibrary.Save(ac4YIdentificationBase);
                 var result = cSAc4YPersistentServiceTestLibrary.GetFirstByTemplate(1);
