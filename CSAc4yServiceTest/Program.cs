@@ -20,7 +20,9 @@ namespace CSAc4yServiceTest
             {
                 CSAc4yPersistentServiceTestLibrary.Class1 cSAc4YPersistentServiceTestLibrary = new CSAc4yPersistentServiceTestLibrary.Class1();
 
-                cSAc4YPersistentServiceTestLibrary.Save();
+                Ac4yIdentificationBase ac4YIdentificationBase = new Ac4yIdentificationBase();
+
+                cSAc4YPersistentServiceTestLibrary.Save(ac4YIdentificationBase);
                 var result = cSAc4YPersistentServiceTestLibrary.GetFirstByTemplate(4);
             } catch (Exception exception)
             {
