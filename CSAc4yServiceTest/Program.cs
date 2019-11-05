@@ -18,12 +18,13 @@ namespace CSAc4yServiceTest
         {
             try
             {
-                CSAc4yPersistentServiceTestLibrary.PersistentService cSAc4YPersistentServiceTestLibrary = new CSAc4yPersistentServiceTestLibrary.PersistentService();
+                AllContext context = new AllContext();
+                CSAc4yPersistentServiceTestLibrary.PersistentService cSAc4YPersistentServiceTestLibrary = new CSAc4yPersistentServiceTestLibrary.PersistentService(context);
 
                 Ac4yIdentificationBase ac4YIdentificationBase = new Ac4yIdentificationBase();
 
                 cSAc4YPersistentServiceTestLibrary.Save(ac4YIdentificationBase);
-                var result = cSAc4YPersistentServiceTestLibrary.GetFirstByTemplate(4);
+                var result = cSAc4YPersistentServiceTestLibrary.GetFirstByTemplate(1);
             } catch (Exception exception)
             {
                 log.Error(exception.Message);
