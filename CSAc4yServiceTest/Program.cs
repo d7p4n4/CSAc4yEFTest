@@ -12,34 +12,20 @@ namespace CSAc4yServiceTest
 {
     class Ac4yService
     {
-        public static GetObjectResponse GetFirstByTemplate(int id)
-        {
-            var response = new GetObjectResponse();
-            try
-            {
-                response.setObject(Ac4yIdentificationBaseEntityMethods.findFirstById(id));
-                response.Result = new Ac4yProcessResult() { Code = "1" };
-            }
-            catch (Exception exception)
-            {
-                response.Result = (new Ac4yProcessResult() { Code = "-1", Message = exception.Message });
-            }
-
-            return response;
-        }
-
-        public static void Save()
-        {
-            Ac4yIdentificationBase ac4yIdentificationBase = new Ac4yIdentificationBase();
-            ac4yIdentificationBase.CreatedAt = DateTime.Now;
-
-            Ac4yIdentificationBaseEntityMethods.addNewAc4yIdentificationBase(ac4yIdentificationBase);
-        }
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public static void Main(string[] args)
         {
-            Save();
-            var result = GetFirstByTemplate(4);
+            try
+            {
+                CSAc4yPersistentServiceTestLibrary.Class1 cSAc4YPersistentServiceTestLibrary = new CSAc4yPersistentServiceTestLibrary.Class1();
+
+                cSAc4YPersistentServiceTestLibrary.Save();
+                var result = cSAc4YPersistentServiceTestLibrary.GetFirstByTemplate(4);
+            } catch (Exception exception)
+            {
+                log.Error(exception.Message);
+            }
         }
     }
 }
