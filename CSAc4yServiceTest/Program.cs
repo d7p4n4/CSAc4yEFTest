@@ -18,7 +18,7 @@ namespace CSAc4yServiceTest
         {
             try
             {
-                CSAc4yPersistentServiceTestLibrary.Class1 cSAc4YPersistentServiceTestLibrary = new CSAc4yPersistentServiceTestLibrary.Class1();
+                CSAc4yPersistentServiceTestLibrary.PersistentService cSAc4YPersistentServiceTestLibrary = new CSAc4yPersistentServiceTestLibrary.PersistentService();
 
                 Ac4yIdentificationBase ac4YIdentificationBase = new Ac4yIdentificationBase();
 
