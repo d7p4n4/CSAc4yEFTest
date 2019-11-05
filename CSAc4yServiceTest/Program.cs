@@ -18,7 +18,7 @@ namespace CSAc4yServiceTest
         {
             try
             {
-                AllContext context = new AllContext();
+                AllContext context = new AllContext("Ac4yDb");
                 CSAc4yPersistentServiceTestLibrary.PersistentService cSAc4YPersistentServiceTestLibrary = new CSAc4yPersistentServiceTestLibrary.PersistentService(context);
 
                 Ac4yIdentificationBase ac4YIdentificationBase = new Ac4yIdentificationBase();
